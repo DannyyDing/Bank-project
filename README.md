@@ -60,4 +60,4 @@ After `Feature Engineering`, the final shape of the data applied would be `57094
 © Author Information  
 By **Danny Ding**  
 Junior at Shanghai Jiao Tong University  
-Email: [dannyquad@sjtu.edu.cn](dannyquad@sjtu.edu.cn)
+Email: [dannyquad@sjtu.edu.cn](mailto:dannyquad@sjtu.edu.cn)
