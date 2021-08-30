@@ -1,12 +1,14 @@
 # 1. Project Discription
 ## 1.1 What is the goal of this project?
-![goal](https://github.com/DannyyDing/Bank-project/blob/main/imgs/goals.png)
 
 This project is based on the author's internship in one of the five major banks in Mainland China,  
 **which aims to**: 
 
 * enhance the overall performance of **black-box models**, as well as to 
 * showcase the models using **Explanable Artificial Intelligence (XAI)**
+
+![goal](https://github.com/DannyyDing/Bank-project/blob/main/imgs/goals.png)
+
 
 ## 1.2 What is the background of this project?
 Compared with traditional statistical models, different kinds of machine learning algorithms 
@@ -26,3 +28,22 @@ may endow the model with unpredictable risks or make biased decisions, and the m
 `Accumulated Local Effect (ALE)`, we could evaluate the black-box models applied, and 
 know the importance of each features, which we could use to have a deeper understanding of ***what is really important when black-box models make
 the decision***. 
+
+# 2. Data Description
+## 2.1 Kaggle Bike Sharing Dataset
+
+**Resource**: [visit here](https://www.kaggle.com/lakshmi25npathi/bike-sharing-dataset)  
+**Description**:  
+This dataset contains the hourly and daily count of rental bikes between the years 2011 and 2012
+in the Capital bike share system with the corresponding weather and seasonal information. 
+We took daily data (`731 x 13`) for analysis (with 12 features and one label named cnt).  
+After `Feature Engineering`, the final shape of the data applied would be `731 x 35`. 
+
+## 2.2 Kaggle Lending Club Dataset
+
+**Resource**: [visit here](https://www.kaggle.com/wordsforthewise/lending-club)  
+**Description**:  
+LendingClub is a company that helps members pay down high-interest debt, 
+save money, and take control of their financial future. 
+The original dataset (`57094 x 95`) for analysis (with 94 features and one label named target).  
+After `Feature Engineering`, the final shape of the data applied would be `57094 x 161`. 
