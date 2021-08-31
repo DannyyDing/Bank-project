@@ -30,7 +30,7 @@ know the importance of each features, which we could use to have a deeper unders
 the decision***. 
 
 ## 1.3 What is the route of accomplishing two goals?
-**Goal 1**: To set a `deep neural network (DNN)` using `PyTorch`.  
+**Goal 1**: We set a `deep neural network (DNN)` using `PyTorch`.  
 **Goal 2**: By using `General Additive Models (GAM)`, we structing unlinear data that are close
 to real-world situations, and substantiated the feasibility of `SHAP`, 
 after which we implement this algorithm in real world situations.
@@ -53,7 +53,7 @@ After `Feature Engineering`, the final shape of the data applied would be `731 x
 **Description**:  
 LendingClub is a company that helps members pay down high-interest debt, 
 save money, and take control of their financial future. 
-The original dataset (`57094 x 95`) for analysis (with 94 features and one label named target).  
+We used the original dataset (`57094 x 95`) for analysis (with 94 features and one label named target).  
 After `Feature Engineering`, the final shape of the data applied would be `57094 x 161`. 
 
 
