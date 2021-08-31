@@ -55,7 +55,7 @@ After `Feature Engineering`, the final shape of the data applied would be `57094
 This dataset contains the hourly and daily count of rental bikes between the years 2011 and 2012
 in the Capital bike share system with the corresponding weather and seasonal information. 
 We took daily data (`731 x 13`) for analysis (with 12 features and one label named cnt).  
-After `Feature Engineering`, the final shape of the data applied would be `731 x 35`. 
+After `Feature Engineering`, the final shape of the data applied would be `731 x 15`. 
 
 © Author Information  
 By **Danny Ding**  
