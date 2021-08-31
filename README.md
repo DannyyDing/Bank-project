@@ -36,17 +36,8 @@ to real-world situations, and substantiated the feasibility of `SHAP`,
 after which we implement this algorithm in real world situations.
 
 # 2. Data Description
-## 2.1 Kaggle Bike Sharing Dataset
 
-**Resource**: [visit here](https://www.kaggle.com/lakshmi25npathi/bike-sharing-dataset)  
-**Main Role**: Substantiating the feasibility of SHAP in real world situations  
-**Description**:  
-This dataset contains the hourly and daily count of rental bikes between the years 2011 and 2012
-in the Capital bike share system with the corresponding weather and seasonal information. 
-We took daily data (`731 x 13`) for analysis (with 12 features and one label named cnt).  
-After `Feature Engineering`, the final shape of the data applied would be `731 x 35`. 
-
-## 2.2 Kaggle Lending Club Dataset
+## 2.1 Kaggle Lending Club Dataset
 
 **Resource**: [visit here](https://www.kaggle.com/wordsforthewise/lending-club)  
 **Main Role**: Enhancing the accuracy of DNN   
@@ -56,6 +47,15 @@ save money, and take control of their financial future.
 We used the original dataset (`57094 x 95`) for analysis (with 94 features and one label named target).  
 After `Feature Engineering`, the final shape of the data applied would be `57094 x 161`. 
 
+## 2.2 Kaggle Bike Sharing Dataset
+
+**Resource**: [visit here](https://www.kaggle.com/lakshmi25npathi/bike-sharing-dataset)  
+**Main Role**: Substantiating the feasibility of SHAP in real world situations  
+**Description**:  
+This dataset contains the hourly and daily count of rental bikes between the years 2011 and 2012
+in the Capital bike share system with the corresponding weather and seasonal information. 
+We took daily data (`731 x 13`) for analysis (with 12 features and one label named cnt).  
+After `Feature Engineering`, the final shape of the data applied would be `731 x 35`. 
 
 © Author Information  
 By **Danny Ding**  
