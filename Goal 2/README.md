@@ -61,8 +61,8 @@ In order to allow for non-linear relationships between each feature,
 we replace each linear component with a (smooth) non-linear function:  
 ![GLM](https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_2.png)  
 There are many methods for fitting functions to a single variable. For example, we could struct data 
-manually, like linear, higher-order or non-linear functions. However
-
+manually, like linear, higher-order or non-linear functions. However  
+<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_2.png" width="375" alt="GAM">
 
 
 
