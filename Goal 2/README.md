@@ -1,9 +1,9 @@
 # Goal 2  
 We showcase the models using **Explanable Artificial Intelligence (XAI)**.
 ## 2.1 R_Feature_Engineering#1.ipynb
-### **Target**:  
+###**Target**:  
 to implement feature engineering(full-dummy variables)  
-### **Notes**:  
+###**Notes**:  
 We **do not** transform the `NOMINAL variables` into traditionnal dummy variables.  
 Instead, we transform them into `FULL-dummy Variables`.  
 Remember the time when we implement
@@ -22,7 +22,7 @@ to explain the model in the final round***, i.e., the time when we implement SHA
 ### **Target**:  
 to implement feature engineering(Standard + PCA)
 ### **Notes**:  
-#### **2.2.1 Delete some irrelevant features**  
+####**2.2.1 Delete some irrelevant features**  
 After 2.1 R_Feature_Engineering#1, we have 34 variables. Here, we deleted some of them.   
 Our princlples whould be: since GAM requires variable independence, it is needed for us to dismiss the correlation between features.  
 The deleted varibles and the corresponding reasons would be:
@@ -33,7 +33,7 @@ The deleted varibles and the corresponding reasons would be:
 ***'mnth_JUL', 'mnth_AUG', 'mnth_SEP', 'mnth_OKT', 'mnth_NOV', 'mnth_DEZ'***:   Could be replaced by days_since_2011
 * ***'holiday_NO_WORKING_DAY'***: Not so strong correlation with cnt
 
-#### **2.2.2 Standard and PCA**  
+####**2.2.2 Standard and PCA**  
 Then, we stantardized the data and implemented PCA.  
 **PCA Variables:**  
 We take ***hum and windspeed*** (which are two `RATIO variables` for PCA).  
