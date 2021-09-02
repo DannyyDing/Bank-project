@@ -104,7 +104,29 @@ We also do not set freedom K (which takes 10 as default). Then, the fitting curv
 
 With K = 10, we plotted 9 figures (order number from 1-9), and the one not plotted is for intercept that is horizontal.  
 We could allocate these 9 figures with different order numbers by counting the places that have `Zero First Derivative`. 
-The `thin-plate regression spline` could give us
+Thus, the `thin-plate regression spline` could give us the curve with a certain degree, and its weight (Note: the intercept value is the mean of cnt).  
+Then, we could make an integrated curve, which is shown below.  
+<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_6.png" width="500" alt="GAM Integrated">  
+So, we have completed the process of evaluating the contribution. Given the curve, we could **calculate the contribution based on the X value**
+(in this case, X is days_since_2011). And ***that contribution equals f(X)*** which is one part of the function we refer to previously.  
+<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_2.png" width="500" alt="GAM">  
+
+And next, if we devide f(X) with intercept (the mean of cnt), we could know ***the importance of this feature***.  
+<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_5.png" width="300" alt="GAM Importance">  
+
+In essence, we refer to `GAM (thin-plate regression spline)` for structing the data, the reason why we resort to this method would be:  
+
+* The structed data are near to ***the real-world situation***;
+* We know each function of each degree clearly, and after combination with weight, we could just 
+check the function value corresponding to x regardless of discrete figures, which ensures that
+***we structed the data with a certain function as well as convenience***;
+* We could compare the importance calculated by f(x) with the one given by SHAP afterwards to ***substantiate the feasibility of SHAP***.
+
+
+
+
+
+
 
 
 © Author Information  
