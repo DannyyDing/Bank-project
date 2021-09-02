@@ -98,8 +98,8 @@ This is a similar idea to principal components analysis (PCA).
 
 We also do not set freedom K (which takes 10 as default). Then, the fitting curves are shown below.
 
-<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_3.png" width="700" alt="GAM Result (separate)">
-<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_4.png" width="200" alt="GAM Result (separate)">  
+<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_3.png" width="500" alt="GAM Result (separate)">
+<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_4.png" width="500" alt="GAM Result (separate)">  
 
 
 With K = 10, we plotted 9 figures (order number from 1-9), and the one not plotted is for intercept that is horizontal.  
