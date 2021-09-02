@@ -122,7 +122,10 @@ check the function value corresponding to x regardless of discrete figures, whic
 ***we structed the data with a certain function as well as convenience***;
 * We could compare the importance calculated by f(x) with the one given by SHAP afterwards to ***substantiate the feasibility of SHAP***.
 
-
+#### **2.3.2 GAM for PCA Variables(X0 and X1)**  
+Following the method staterd in 2.3.1, we plotted the graph for X0 and X1 (which originally are ***hum*** and ***windspeed***):  
+<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_X0.png" width="300" alt="GAM_X0">  
+<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_X1.png" width="300" alt="GAM_X1">  
 
 
 
