@@ -1,6 +1,6 @@
 # Goal 2  
 We showcase the models using **Explanable Artificial Intelligence (XAI)**.
-## 2.1 R_Feature_Engineering#1.ipynb
+## 2.1 Feature_Engineering#1
 ### **Target**:  
 to implement feature engineering(full-dummy variables)  
 ### **Notes**:  
@@ -18,7 +18,7 @@ account for the missed situation. Is it important? Or, does it have nothing to d
 By transforming all `NOMINAL variables` into `FULL-dummy Variables`, we surely make the features more complicated, but thanks to this effort, ***it is easier for us
 to explain the model in the final round***, i.e., the time when we implement SHAP.
 
-## 2.2 Python_Feature_Engineering#2
+## 2.2 Feature_Engineering#2
 ### **Target**:  
 to implement feature engineering(Standard + PCA)
 ### **Notes**:  
@@ -46,7 +46,25 @@ We could use correlation map to evaluate the effect of PCA.
 ![before PCA](https://github.com/DannyyDing/Bank-project/blob/main/imgs/PCA_before.png)  
 **After PCA**:  
 ![after PCA](https://github.com/DannyyDing/Bank-project/blob/main/imgs/PCA_after.png)
-We could see that PCA has eliminated the correlation of the first two `RATIO variables`.
+We could see that PCA has eliminated the correlation of the first two `RATIO variables`.  
+At the same time, we saved the `pca_components file` for subsequent processes.
+
+## 2.3 GAM
+### **Target**:  
+to do GAM on processed data, struct the label that is close to the real-world situation, 
+and to calculate the weight gathered by GAM
+### **Notes**:  
+#### **2.3.1 Ideas for structing data close to real situations using GAM**  
+Generalized Additive Models (GAM) is a natural way to extend the multiple linear regression model:  
+$ f(x)=ax^2+bx+c $
+
+
+
+
+
+
+
+
 
 
 © Author Information  
