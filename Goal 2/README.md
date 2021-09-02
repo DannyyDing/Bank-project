@@ -61,7 +61,41 @@ In order to allow for non-linear relationships between each feature,
 we replace each linear component with a (smooth) non-linear function:  
 <img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_2.png" width="500" alt="GAM">  
 There are many methods for fitting functions to a single variable. For example, we could struct data 
-manually, like linear, higher-order or non-linear functions. However  
+manually, like linear, higher-order or non-linear functions. In these methods, however, no matter how intentive we are
+when we allocate the functions, it is highly possible that they do not reflect the real world.  
+Admittedly, **it might be easier for us to check the result given by structed data we create, and the result given by SHAP**
+(it is easy because WE KNOW what we used to struct the data, the only thing we need to do is to 
+check whether these features would be given by SHAP, then everything is done), 
+***but the fatal issue is that it deviates from reality***. Then, however easy it might be to use this method, it is not meaningful at all.  
+In `GAM`, A `natural spline` is a kind of **regression spline**, i.e., we require:  
+
+* continuity at the knot
+* continuity in the first derivative at the knot, and
+* Require continuity in the second derivative at the knot
+
+
+with an additional boundary constraint that solves **the high variance issue**, i.e., it is 
+the function is linear at the boundary,the region where X is:
+
+* smaller than the smallest knot, or
+* larger than the largest knot
+
+In this way, we could use this algorithm to work out a function that is the closest to the real-world situation.
+At the same time, we could also see what features contributed to the structed labels.  
+Take the following feature for an example:
+```javascript
+  gam(cnt ~ s(days_since_2011), data = bike)
+```
+In the instantiation of GAM, we do not include a value for parameter bs,
+therefore the default basis: **bs = 'tp'** will be used. It is `thin-plate regression spline`, which is similar to 
+`natural spline` with knots at some unique values of X.  
+**But there is some kind of difference: **  
+
+* **It is controlled by penality λ**, and
+* **The knots are not predictable**. Thin plate regression spline is a low rank approximation to `full thin-plate spline`,
+based on truncated eigen decomposition, which lowers the computation complexity.
+This is a similar idea to principal components analysis (PCA).
+
 
 
 
