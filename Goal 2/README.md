@@ -43,9 +43,9 @@ Also, we do not do PCA for `FULL-dummy variables`, because the 0 or 1 in dummy v
 If we conduct PCA, the result is not explanable.  
 We could use correlation map to evaluate the effect of PCA.   
 **Before PCA**:  
-![before PCA](https://github.com/DannyyDing/Bank-project/blob/main/imgs/PCA_before.png)  
+<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/PCA_before.png" width="700" alt="before PCA">  
 **After PCA**:  
-![after PCA](https://github.com/DannyyDing/Bank-project/blob/main/imgs/PCA_after.png)
+<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/PCA_after.png" width="700" alt="after PCA">
 We could see that PCA has eliminated the correlation of the first two `RATIO variables`.  
 At the same time, we saved the `pca_components file` for subsequent processes.
 
@@ -56,13 +56,12 @@ and to calculate the weight gathered by GAM
 ### **Notes**:  
 #### **2.3.1 Ideas for structing data close to real situations using GAM (Natural Splines)**  
 Generalized Additive Models (GAM) is a natural way to extend the multiple linear regression model:  
-![MLR](https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_1.png)  
+<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_1.png" width="500" alt="MLR">  
 In order to allow for non-linear relationships between each feature,
 we replace each linear component with a (smooth) non-linear function:  
-![GLM](https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_2.png)  
+<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_2.png" width="500" alt="GAM">  
 There are many methods for fitting functions to a single variable. For example, we could struct data 
 manually, like linear, higher-order or non-linear functions. However  
-<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_2.png" width="375" alt="GAM">
 
 
 
