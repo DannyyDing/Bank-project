@@ -51,10 +51,10 @@ At the same time, we saved the `pca_components file` for subsequent processes.
 
 ## 2.3 GAM
 ### **Target**:  
-to do GAM (Natural Splines) on processed data, struct the label that is close to the real-world situation, 
+to do GAM (thin-plate regression spline) on processed data, struct the label that is close to the real-world situation, 
 and to calculate the weight gathered by GAM
 ### **Notes**:  
-#### **2.3.1 Ideas for structing data close to real situations using GAM (Natural Splines)**  
+#### **2.3.1 Ideas for structing data close to real situations using GAM (thin-plate regression spline)**  
 Generalized Additive Models (GAM) is a natural way to extend the multiple linear regression model:  
 <img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_1.png" width="500" alt="MLR">  
 In order to allow for non-linear relationships between each feature,
@@ -63,11 +63,11 @@ we replace each linear component with a (smooth) non-linear function:
 There are many methods for fitting functions to a single variable. For example, we could struct data 
 manually, like linear, higher-order or non-linear functions. In these methods, however, no matter how intentive we are
 when we allocate the functions, it is highly possible that they do not reflect the real world.  
-Admittedly, **it might be easier for us to check the result given by structed data we create, and the result given by SHAP**
+The aim for us is to get what kind of features is important. Admittedly, **it might be easier for us to check the result given by structed data we create, and the result given by SHAP**
 (it is easy because WE KNOW what we used to struct the data, the only thing we need to do is to 
 check whether these features would be given by SHAP, then everything is done), 
-***but the fatal issue is that it deviates from reality***. Then, however easy it might be to use this method, it is not meaningful at all.  
-In `GAM`, A `natural spline` is a kind of **regression spline**, i.e., we require:  
+***but the fatal issue is that it deviates from reality, where linear, high-order or non-linear functions might be present at the same time***. Then, however easy it might be to use this method, it is not meaningful at all.  
+We use `GAM (thin-plate regression spline)` to tackle this issue. In `GAM`, A `natural spline` is a kind of `regression spline`, i.e., we require:  
 
 * continuity at the knot
 * continuity in the first derivative at the knot, and
@@ -80,8 +80,8 @@ the function is linear at the boundary,the region where X is:
 * smaller than the smallest knot, or
 * larger than the largest knot
 
-In this way, we could use this algorithm to work out a function that is the closest to the real-world situation.
-At the same time, we could also see what features contributed to the structed labels.  
+In this way, we could use this algorithm to work out a complicated function that is the closest to the real-world situation.
+At the same time, we could also see what features contributed the most to the structed labels.  
 Take the following feature for an example:
 ```javascript
   gam(cnt ~ s(days_since_2011), data = bike)
@@ -93,14 +93,18 @@ therefore the default basis: **bs = 'tp'** will be used. It is `thin-plate regre
 
 * **It is controlled by penality λ**, and
 * **The knots are not predictable**. Thin plate regression spline is a low rank approximation to `full thin-plate spline`,
-based on truncated eigen decomposition, which lowers the computation complexity.
+and is based on truncated eigen decomposition, which lowers the computation complexity.
 This is a similar idea to principal components analysis (PCA).
 
+We also do not set freedom K (which takes 10 as default). Then, the fitting curves are shown below.
+
+<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_3.png" width="700" alt="GAM Result (separate)">
+<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_4.png" width="200" alt="GAM Result (separate)">  
 
 
-
-
-
+With K = 10, we plotted 9 figures (order number from 1-9), and the one not plotted is for intercept that is horizontal.  
+We could allocate these 9 figures with different order numbers by counting the places that have `Zero First Derivative`. 
+The `thin-plate regression spline` could give us
 
 
 © Author Information  
