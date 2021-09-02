@@ -129,7 +129,7 @@ and to calculate the weight gathered by GAM
 ### **Notes**:  
 #### **2.3.1 Ideas for structing data close to real situations using GAM**  
 Generalized Additive Models (GAM) is a natural way to extend the multiple linear regression model:  
-![](http://latex.codecogs.com/gif.latex?\\sigma=\sqrt{\frac{1}{n}{\sum_{k=1}^n(x_i-\bar{x})
+![](http://latex.codecogs.com/gif.latex?\\sigma=\sqrt{\frac{1}{n}{\sum_{k=1}^n(x_i-\bar{x})))
 
 
 
