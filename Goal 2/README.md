@@ -154,16 +154,42 @@ In the function above,
 * ***I(x)*** is the importance of the original variable, and ***I(X)*** is the importance of the variable after PCA.  
 
 In particular, for the case in this project, we have:  
-<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_hum%26windspeed.png" width="800" alt="GAM_hum&windspeed">  
+<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_hum%26windspeed.png" width="1000" alt="GAM_hum&windspeed">  
 We randomly select 10 sample points. For each sample point, we calculate the importance of all the features 
 and arrange them in descending order, take the top 5 importances and plot them.  
 Take #552 for an example:  
 <img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_%23552.png" width="500" alt="GAM_#551">  
 In next session, we are to get the importance from SHAP and compare the results.
 
+## 2.4 XGBoost
+### **Target**:  
+to implement XGBoost on the processed data, and use SHAP to explain the model
+### **Notes**:  
+#### **2.4.1 XGBoost(without tuning)**  
+We did not do any tuning to XGBoost, because **the raw model has a relatively high accuracy**, and
+our main target in `Goal 2` is **to substantiate the feasibility of SHAP** rather than to find a 
+even powerful regression tree.
 
+#### **2.4.2 SHAP for local explanation**  
+The SHAP algorithm, an explanatory algorithm implemented in 2017 by Scott M. Lundberg. ([visit here](https://proceedings.neurips.cc//paper/2017/file/8a20a8621978632d76c43dfd28b67767-Paper.pdf)), is based on
+the idea of `Joint Game Theory`, and it uses the `Shapley Value Principle` to perform feature contribution scores on the prediction.  
+`Shapley Value Principle` is a rigorous value distribution principle, and is based on the average value of each member's marginal contribution, whose aim is to decompose the total value of the project.  
+<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/SHAP.png" width="800" alt="SHAP">  
+The function above is for **local explanation**, i.e., for illustrating what is important for a single sample, where:  
 
+* ***j***: the feature to be explained; 
+* ***S***: Feature Space; 
+* ***p***: the number of features; 
 
+By using ***Combination***, we could rewrite the function above as:  
+<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/SHAP_simple.png" width="800" alt="SHAP simple">  
+Therefore, Shapley Value is the result of extracting S features from the feature space
+from which the feature to be observed is removed, and taking the average again
+on this extracted whole feature space.
+
+We compared the TOP 5 variables that are important given by GAM and SHAP on 10 randomly-selected samples,
+and the matching ratio is `0.74`(see Importance comparison between GAM and SHAP.pdf, [see here](https://github.com/DannyyDing/Bank-project/blob/main/Goal%202/Importance%20comparison%20between%20GAM%20and%20SHAP.pdf)), which substantiated the feasibility of using SHAP to explain the 
+machine learning models, and account for the importance of features.
 
 
 © Author Information  
