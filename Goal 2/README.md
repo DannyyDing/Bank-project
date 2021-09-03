@@ -187,7 +187,7 @@ Therefore, Shapley Value is the result of extracting S features from the feature
 from which the feature to be observed is removed, and taking the average again
 on this extracted feature space.
 
-We compared the TOP 5 variables that are important given by GAM and SHAP on 10 randomly-selected samples,
+We compared the TOP 5 variables that are important given by GAM and SHAP on 10 randomly-selected samples (with discrete distribution of residuals),
 and the matching ratio is `0.74`(check ***Local Explanation*** on Importance comparison between GAM and SHAP.pdf, [see here](https://github.com/DannyyDing/Bank-project/blob/main/Goal%202/Importance%20comparison%20between%20GAM%20and%20SHAP.pdf)), which substantiated the feasibility of using SHAP to explain the 
 machine learning models, and account for the importance of features.
 
