@@ -161,9 +161,9 @@ Take #552 for an example:
 <img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_%23552.png" width="500" alt="GAM_#551">  
 In next session, we are to get the importance from SHAP and compare the results.
 
-## 2.4 XGBoost
+## 2.4 XGBoost and SHAP
 ### **Target**:  
-to implement XGBoost on the processed data, and use SHAP to explain the model
+to implement XGBoost on the processed data, and use SHAP to explain the model both locally and globally
 ### **Notes**:  
 #### **2.4.1 XGBoost(without tuning)**  
 We did not do any tuning to XGBoost, because **the raw model has a relatively high accuracy**, and
@@ -185,11 +185,16 @@ By using ***Combination***, we could rewrite the function above as:
 <img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/SHAP_simple.png" width="800" alt="SHAP simple">  
 Therefore, Shapley Value is the result of extracting S features from the feature space
 from which the feature to be observed is removed, and taking the average again
-on this extracted whole feature space.
+on this extracted feature space.
 
 We compared the TOP 5 variables that are important given by GAM and SHAP on 10 randomly-selected samples,
-and the matching ratio is `0.74`(see Importance comparison between GAM and SHAP.pdf, [see here](https://github.com/DannyyDing/Bank-project/blob/main/Goal%202/Importance%20comparison%20between%20GAM%20and%20SHAP.pdf)), which substantiated the feasibility of using SHAP to explain the 
+and the matching ratio is `0.74`(check ***Local Explanation*** on Importance comparison between GAM and SHAP.pdf, [see here](https://github.com/DannyyDing/Bank-project/blob/main/Goal%202/Importance%20comparison%20between%20GAM%20and%20SHAP.pdf)), which substantiated the feasibility of using SHAP to explain the 
 machine learning models, and account for the importance of features.
+
+#### **2.4.3 SHAP for global explanation**
+We counted recourrence of each feature that show up as the TOP 5 important variables given by GAM and SHAP.
+The result turns out to be good, that the matching ratio reached `1.00` (check ***Global Explanation*** on Importance comparison between GAM and SHAP.pdf, [see here](https://github.com/DannyyDing/Bank-project/blob/main/Goal%202/Importance%20comparison%20between%20GAM%20and%20SHAP.pdf)),
+which indicates that SHAP would be competitively effective for global explanation.
 
 
 © Author Information  
