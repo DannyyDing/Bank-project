@@ -124,8 +124,42 @@ check the function value corresponding to x regardless of discrete figures, whic
 
 #### **2.3.2 GAM for PCA Variables(X0 and X1)**  
 Following the method staterd in 2.3.1, we plotted the graph for X0 and X1 (which originally are ***hum*** and ***windspeed***):  
-<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_X0.png" width="300" alt="GAM_X0">  
-<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_X1.png" width="300" alt="GAM_X1">  
+<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_X0.png" width="500" alt="GAM_X0">  
+<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_X1.png" width="500" alt="GAM_X1">  
+
+#### **2.3.3 GAM for NONE-PCA Variables**  
+The method is the same, and the curves are shown below.  
+<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_days_since_2011.png" width="500" alt="GAM_days_since_2011">  
+<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_holiday.png" width="500" alt="GAM_holiday">  
+<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_weekday.png" width="500" alt="GAM_weekday">  
+<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_weathersit.png" width="500" alt="GAM_weathersit">  
+
+#### **2.3.4 Work out the final label** 
+We add up all the f(X) as well as the intercept to work out the final label.
+
+#### **2.3.5 Importance Calculation**
+For ***Non-PCA variables***, we could use this function stated above to calculate the importance given by GAM:  
+<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_5.png" width="300" alt="GAM Importance">  
+For ***PCA variables***, we would like to see the importance of ***hum*** and ***windspeed***
+rather than ***X0*** and ***X1***. So, we need to do one step of transformation which is based on
+`L2 normal form distance`:
+<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_7.png" width="500" alt="L2 normal form distance">  
+In the function above,  
+
+* ***x*** is the original variable, and ***X*** is the variable after PCA;
+* ***PCA*** is one component from the matrix 
+```javascript
+  pca.components_
+```
+* ***I(x)*** is the importance of the original variable, and ***I(X)*** is the importance of the variable after PCA.  
+
+In particular, for the case in this project, we have:  
+<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_hum%26windspeed.png" width="500" alt="GAM_hum&windspeed">  
+We randomly select 10 sample points. For each sample point, we calculate the importance of all the features 
+and arrange them in descending order, take the top 5 importances and plot them.  
+Take #552 for an example:  
+<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_%23552.png" width="500" alt="GAM_#551">  
+In next session, we are to get the importance from SHAP and compare the results.
 
 
 
