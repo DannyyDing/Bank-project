@@ -142,7 +142,7 @@ For ***Non-PCA variables***, we could use this function stated above to calculat
 <img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_5.png" width="300" alt="GAM Importance">  
 For ***PCA variables***, we would like to see the importance of ***hum*** and ***windspeed***
 rather than ***X0*** and ***X1***. So, we need to do one step of transformation which is based on
-`L2 normal form distance`:
+`L2 normal form distance`:  
 <img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_7.png" width="500" alt="L2 normal form distance">  
 In the function above,  
 
@@ -154,7 +154,7 @@ In the function above,
 * ***I(x)*** is the importance of the original variable, and ***I(X)*** is the importance of the variable after PCA.  
 
 In particular, for the case in this project, we have:  
-<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_hum%26windspeed.png" width="500" alt="GAM_hum&windspeed">  
+<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/GAM_hum%26windspeed.png" width="800" alt="GAM_hum&windspeed">  
 We randomly select 10 sample points. For each sample point, we calculate the importance of all the features 
 and arrange them in descending order, take the top 5 importances and plot them.  
 Take #552 for an example:  
