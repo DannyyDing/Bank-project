@@ -4,7 +4,7 @@ We showcase the models using **Explanable Artificial Intelligence (XAI)**.
 ### **Target**:  
 to implement feature engineering(full-dummy variables)  
 ### **Notes**:  
-We **do not** transform the `NOMINAL variables` into traditionnal dummy variables.  
+Like the case of Goal 1, we **do not** transform the `NOMINAL variables` into traditionnal dummy variables.  
 Instead, we transform them into `FULL-dummy Variables`.  
 Remember the time when we implement
 ```javascript
@@ -15,7 +15,8 @@ Admittedly, it does make the features the simplist. If one single dummy variable
 If all the dummy variables are allocated with 0, then it stands for the class that these k-1 situations missed.  
 However, ***please remember our target is to explain the model***. So if we refer to the traditional way, we are not able to
 account for the missed situation. Is it important? Or, does it have nothing to do with the final label? We do not know.   
-By transforming all `NOMINAL variables` into `FULL-dummy Variables`, we surely make the features more complicated, but thanks to this effort, ***it is easier for us
+By transforming all `NOMINAL variables` into `FULL-dummy Variables` (i.e., we create k new variables, and if the data sample
+belong to the certain class, then it would be 1, and all other variables would be allocated with 0), we surely make the features more complicated. But, thanks to this effort, ***it is easier for us
 to explain the model in the final round***, i.e., the time when we implement SHAP.
 
 ## 2.2 Feature_Engineering#2
