@@ -24,7 +24,7 @@ to implement feature engineering(Standard + PCA)
 ### **Notes**:  
 #### **2.2.1 Delete some irrelevant features**  
 After 2.1 R_Feature_Engineering#1, we have 34 variables. Here, we deleted some of them.   
-Our princlples whould be: since GAM requires variable independence, it is needed for us to dismiss the correlation between features.  
+Our princlples would be: since GAM requires variable independence, it is needed for us to dismiss the correlation between features.  
 The deleted varibles and the corresponding reasons would be:
 
 * ***'temp', 'atemp'***: Too much correlation with other features; 
