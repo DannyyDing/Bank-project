@@ -45,9 +45,9 @@ after which we implement this algorithm in real world situations.
 LendingClub is a company that helps members pay down high-interest debt, 
 save money, and take control of their financial future. 
 The original dataset was **preprocessed** (we combined the accepted data with the rejected ones, randomly scrambled them, 
-and randomly chose 57094 data samples with 94 features and one label (`57094 x 95`) ), for training models and making predictions 
+and randomly chose 57094 data samples with 94 features and one label (`57094 x 95`), [visit here](https://github.com/myt10/Interpret-experiment/blob/main/pre_process/process.ipynb)), for training models and making predictions 
 with fewer computing resources.  
-After `Feature Engineering`, the final shape of the data applied would be `57094 x 161`. 
+Afterwards, we conducted `Feature Engineering` in Goal 1, and the final shape of the data applied would be `57094 x 161`. 
 
 ## 2.2 Kaggle Bike Sharing Dataset
 
