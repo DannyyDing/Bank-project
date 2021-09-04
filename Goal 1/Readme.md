@@ -37,3 +37,20 @@ Also, we deleted two variables:
 
 * ***'funded_amnt'***: too much correlation with other features;
 * ***'term'***: all data samples share the same value '60', which is not helpful in predicton.
+
+## 1.2 DNN
+### **Target**:  
+to build a DNN model based on PyTorch
+### **Notes**:  
+The whole training route for DNN model built is shown below.  
+<img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/DNN_route.png" width="1000" alt="DNN Training Route">  
+
+
+
+
+
+
+© Author Information  
+By **Danny Ding**  
+Junior at Shanghai Jiao Tong University  
+Email: [dannyquad@sjtu.edu.cn](mailto:dannyquad@sjtu.edu.cn)
