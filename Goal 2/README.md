@@ -38,7 +38,7 @@ The deleted varibles and the corresponding reasons would be:
 Then, we stantardized the data and implemented PCA.  
 **PCA Variables:**  
 We take ***hum and windspeed*** (which are two `RATIO variables` for PCA).  
-**NONE-PCA Variablers: **  
+**NONE-PCA Variablers:**  
 We leave days_since_2011 alone with dummy variables because it is a kind of `INTERVAL variables`, which we are not able to PCA together.
 Also, we do not do PCA for `FULL-dummy variables`, because the 0 or 1 in dummy variables is not meaningful at all.
 If we conduct PCA, the result is not explanable.  
@@ -90,7 +90,7 @@ Take the following feature for an example:
 In the instantiation of GAM, we do not include a value for parameter bs,
 therefore the default basis: **bs = 'tp'** will be used. It is `thin-plate regression spline`, which is similar to 
 `natural spline` with knots at some unique values of X.  
-**But there is some kind of difference: **  
+**But there is some kind of difference:**  
 
 * **It is controlled by penality λ**, and
 * **The knots are not predictable**. Thin plate regression spline is a low rank approximation to `full thin-plate spline`,
