@@ -44,10 +44,24 @@ to build a DNN model based on PyTorch
 ### **Notes**:  
 The whole training route for DNN model built is shown below.  
 <img src="https://github.com/DannyyDing/Bank-project/blob/main/imgs/DNN_route.png" width="1000" alt="DNN Training Route">  
+We built a DNN with ***10 fully-connected layers***, and the number of neurons varies from one layer to another (check the number
+written below the layers for the number). Between layers, we set the activation function: `LeakyReLU` for the 1st and 2nd activation function, 
+and `ReLU` for the rest of them.  
+We used the ***LOSS on the training set*** for Back-Propagation process, and in the training process, we checked ***the accuracy on the validation set***,
+on which our decision on whether we are to save the DNN model is based. If the validation accuracy is higher than `0.999`, we think that it is 
+a good model, and we save them for further accuracy test on the testing set, which is a part of testing process.
+**Note**: we separated the validation set with the testing set, which is the thing that the machine learning principle asks us to do. 
+*** We could only refer to the data that the model has never seen before for testing, in order to avoid model-cheating.***  
+Eventually, the DNN model gives us an accuracy of `0.99956` on the testing set.
 
-
-
-
+We did not implement SHAP here, since **it requires massive computational resources** and the time used to 
+compute SHAPley Values would be exponentially soaring when the data set becomes bigger.  
+We made an experiment on our 
+personal computer: for 
+100 data samples, SHAP takes 8 seconds to calculate the SHAPley Value; for 1,000 data samples, SHAP takes 40 minutes; 
+for 10,000 data samples, it is estimated that 17 days need to be spent on calculation, not to say 57,094 data samples, which would be quite a 
+long journey for our computer.  
+***For the implementation of SHAP, *** please refer to [Goal 2](https://github.com/DannyyDing/Bank-project/tree/main/Goal%202)
 
 
 © Author Information  
