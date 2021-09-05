@@ -61,7 +61,7 @@ personal computer: for
 100 data samples, SHAP takes 8 seconds to calculate the SHAPley Value; for 1,000 data samples, SHAP takes 40 minutes; 
 for 10,000 data samples, it is estimated that 17 days need to be spent on calculation, not to say 57,094 data samples, which would be quite a 
 long journey for our computer.  
-***For the implementation of SHAP,*** please refer to [Goal 2](https://github.com/DannyyDing/Bank-project/tree/main/Goal%202)
+***For the implementation of SHAP,*** please refer to [Goal 2](https://github.com/DannyyDing/Bank-project/tree/main/Goal%202).
 
 
 © Author Information  
