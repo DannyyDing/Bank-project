@@ -14,7 +14,7 @@ This project is based on the author's internship in one of the five major banks 
 Compared with traditional statistical models, different kinds of machine learning algorithms 
 have better predictive performance. Black box models, like `XGBoost` and `Deep Neural Networks (DNN)`, 
 empower homo sapiens with even more powerful tools, which might ***further improve accuracy***.
-As it is required for these black-box models, algorithm enginners are to make some tuning to these models
+As it is required for these black-box models, algorithm engineers are to make some tuning to these models
 to reach this goal.
 
 Nevertheless, latent risk might also be brought about pursuing this target. The internal structure of
