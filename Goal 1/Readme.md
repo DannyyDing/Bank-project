@@ -66,5 +66,5 @@ long journey for our computer.
 
 © Author Information  
 By **Danny Ding**  
-Junior at Shanghai Jiao Tong University  
+Senior at Shanghai Jiao Tong University  
 Email: [dannyquad@sjtu.edu.cn](mailto:dannyquad@sjtu.edu.cn)
