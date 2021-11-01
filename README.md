@@ -61,5 +61,5 @@ After `Feature Engineering`, the final shape of the data applied would be `731 x
 
 © Author Information  
 By **Danny Ding**  
-Junior at Shanghai Jiao Tong University  
+Senior at Shanghai Jiao Tong University  
 Email: [dannyquad@sjtu.edu.cn](mailto:dannyquad@sjtu.edu.cn)
