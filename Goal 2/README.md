@@ -200,5 +200,5 @@ which indicates that SHAP would be competitively effective for global explanatio
 
 © Author Information  
 By **Danny Ding**  
-Junior at Shanghai Jiao Tong University  
+Senior at Shanghai Jiao Tong University  
 Email: [dannyquad@sjtu.edu.cn](mailto:dannyquad@sjtu.edu.cn)
